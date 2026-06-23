@@ -11,7 +11,7 @@ import seaborn as sns
 project_root = Path(__file__).resolve().parent.parent
 
 full_data_dir = project_root / "data" / "full"
-out_vis_dir = project_root / "output" / "cleaned_data"
+out_vis_dir = project_root / "outputs" / "visualizations" / "cleaned_data"
 sample_data_dir = project_root / "data" 
 
 full_data_dir.mkdir(parents=True, exist_ok=True)
