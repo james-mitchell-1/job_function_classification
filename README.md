@@ -33,13 +33,15 @@ Python, pandas, matplotlib, seaborn, nltk, and sklearn
 - Job 'Role' and 'Title' have been used interchangably (though rarely simultaneously) over time.
 
 - Job 'Function', 'Role Level', and 'Management Level' contain redundant variations of the same classes.  Distinct classes may have overlap with other classes.
-    - This will impact the performance of our classificatio model (as evident in the high levels of misclassification for 'General Managment', and 'Program and Product Management', for example)
+   - This will impact the performance of our classification model (as evident in the high levels of misclassification for 'General Management', and 'Program and Product Management', for example)
 
-    - Increasing the distinctness of classes through consolidation may improve performance.
+   - Increasing the distinctness of classes through consolidation may improve performance.
+
 
 - Job 'Function' classification using a TFIDF model is highly dependent on class.
-    - The model does reasonably well classifying 'Academics (Teaching & Learning)', 'Data / Analytics / Research', and 'General Management'
+   - The model does reasonably well classifying 'Academics (Teaching & Learning)', 'Data / Analytics / Research', and 'General Management'
 
-    - The model struggles to perform well on all other classes
+   - The model struggles to perform well on all other classes
 
-- Deployment of the model will require class specific tuning around on acceptable error, similarity between classes, and the impact of misclassification on organizational decision making. 
+- Deployment of the model will require class specific tuning around labeling threshold, required coverage, and acceptable error.
+
