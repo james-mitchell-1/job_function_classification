@@ -255,6 +255,10 @@ replacements = {
     'fdr' : 'founder',
     'cof' : 'co-founder',
     'v.p.' : 'vice president',
+    'hr' : 'human resources',
+    'h.r.' : 'human resources',
+    'pr' : 'public relations',
+    'p.r.' : 'public relations'
 }
 
 for old, new in replacements.items():
