@@ -13,7 +13,7 @@ An investigation into the viability of classifying a job's function from the job
     - 'notebooks/'job_function_classification.ipynb'
 
 ## Dataset
-The data comes from a non-profit organization in the education sector.  As we'll see, the data gathered by the organization has evolved over time resulting in inconsitant classes and field use cases.  Each of the 109,485 records represent a single job and has been limited to the following variables:
+This data was collected by a non-profit organization in the education sector. It spans 20 years and over 5,000 individuals who have applied to their program. As we'll see, the data gathered by the organization has evolved over time resulting in inconsitant classes and shifting field uses.  Each of the 109,485 rows are unique job history records collected during the program application process or post-program surveying.  For our purposes, the data has been limited to the following variables:
 
 | Column | Missing Values | Data Type |
 |---|---|---|

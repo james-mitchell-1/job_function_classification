@@ -269,8 +269,16 @@ for old, new in replacements.items():
         regex=True
     )
 
+# filter out records that are just IDs
+has_role_mask = aff['role_imputed'].notna() & (aff['role_imputed'] != "")
+has_function_mask = aff['function'].notna() & (aff['function'] != "")
+has_role_level_mask = aff['role_level'].notna() & (aff['role_imputed'] != "")
+has_management_level_mask = aff['management_level'].notna() & (aff['role_imputed'] != "")
+
+aff = aff[has_role_mask | has_function_mask | has_role_level_mask | has_management_level_mask]
+
 # save complete for classification
-aff.to_csv(full_data_dir / "cleaned_job_affiliations.csv", index=False)
+aff.to_csv('../data/full/cleaned_job_affiliations.csv', index=False)
 
 # save sample
-aff.sample(200, random_state = 34).to_csv(sample_data_dir / 'cleaned_data_sample.csv', index=False)
+aff.sample(200, random_state = 34).to_csv('../data/cleaned_data_sample.csv', index=False)
